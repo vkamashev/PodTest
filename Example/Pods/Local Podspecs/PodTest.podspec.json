@@ -19,7 +19,7 @@
     "ios": "8.0"
   },
   "source_files": "PodTest/Classes/**/*",
-  "swift_version": "4.0",
+  "swift_version": "4.2",
   "dependencies": {
     "Alamofire": [
 
