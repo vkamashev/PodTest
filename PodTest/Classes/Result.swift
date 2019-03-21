@@ -19,4 +19,20 @@ public extension CustomResult {
         case let .failure(error): return .failure(error)
         }
     }
+    
+    func toOptional() -> Optional<ResultType> {
+        switch self {
+        case let .success(value): return Optional(value)
+        default: return .none
+        }
+    }
+}
+
+public extension Optional {
+    func toCustomResult() -> CustomResult<Wrapped> {
+        switch self {
+        case let .some(value): return .success(value)
+        default: return .failure(nil)
+        }
+    }
 }
